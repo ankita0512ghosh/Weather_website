@@ -1,0 +1,37 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  background-color: cornsilk;
+}
+
+.main-temp {
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h1 {
+  margin-top: 10px;
+  font-family: "Lobster", cursive;
+}
+
+.temp {
+  background-color: darkgray;
+}
+
+.temperature {
+  font-size: 90px;
+}
+
+.units {
+  font-size: 15px;
+}
+
+ul {
+  margin: 5px 0 10px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
