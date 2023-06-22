@@ -45,13 +45,12 @@ function resultantshow(response) {
 function showPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
-  return [lat, long];
-  
+  axios.get(`${apiUrl}&lat=${lat}&lon=${long}&appid=${apikey}`).then(resultantshow);
 }
 
-axios.get(`${apiUrl}&lat=${lat}&lon=${long}&appid=${apikey}`).then(resultantshow);
 
 function onclickbtn2() {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
