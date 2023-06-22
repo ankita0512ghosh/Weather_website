@@ -1,4 +1,3 @@
-import axios from "axios";
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -31,8 +30,8 @@ dateElement.innerHTML = formatDate(currentTime);
 let apikey = "58bb081f22fea521a4a3cd7ccb24aa88";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric";
 
-// let lat = 0;
-// let long = 0;
+let lat = 0;
+let long = 0;
 
 function resultantshow(response) {
   let cit = document.querySelector("#city");
@@ -46,9 +45,11 @@ function resultantshow(response) {
 function showPosition(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
-  // return [lat, long];
-  axios.get(`${apiUrl}&lat=${lat}&lon=${long}&appid=${apikey}`).then(resultantshow);
+  return [lat, long];
+  
 }
+
+axios.get(`${apiUrl}&lat=${lat}&lon=${long}&appid=${apikey}`).then(resultantshow);
 
 function onclickbtn2() {
   navigator.geolocation.getCurrentPosition(showPosition);
