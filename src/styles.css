@@ -4,6 +4,9 @@
   background-color: cornsilk;
 }
 
+.link-git{
+  text-decoration: none;
+}
 .main-temp {
   font-family: "Merriweather", serif;
   font-weight: bold;
